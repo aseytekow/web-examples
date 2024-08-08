@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+@keyframes anim {
+    0% {
+        border-left: 10px solid white;
+    }
+    25% {
+        border-left: 0 solid white;
+        box-shadow: 0 0 40px white;
+    }
+    50% {
+        box-shadow: none;
+        border-right: 10px solid white;
+    }
+    75% {
+        border-left: 0 solid white;
+        box-shadow: 0 0 40px white;
+    }
+    100% {
+        border-left: 10px solid white;
+    }
+}
+
+.circle {
+    animation: 10s anim linear infinite;
+    background-color: black;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+}
